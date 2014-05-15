@@ -1,6 +1,6 @@
 {
-  "name": "moodley-web",
-  "version": "0.0.1",
+  "name": "WordpressToGo",
+  "version": "0.1.0",
   "devDependencies": {
     "grunt": "~0.4.2",
     "glob": "~3.2.9",
