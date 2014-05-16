@@ -11,7 +11,8 @@
     "grunt-autoprefixer": "~0.7.2",
     "grunt-cssc": "~0.2.6",
     "grunt-ftp-deploy": "^0.1.2",
-    "grunt-newer": "^0.7.0"
+    "grunt-newer": "^0.7.0",
+    "grunt-contrib-copy": "*"
   },
   "dependencies": {
     "load-grunt-tasks": "~0.2.1"

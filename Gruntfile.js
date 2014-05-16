@@ -52,8 +52,9 @@ module.exports = function(grunt) {
 	grunt.registerTask('deploy-functions', ['ftp-deploy:functions']);
 	grunt.registerTask('deploy-plugins', ['ftp-deploy:plugins']);
 	grunt.registerTask('deploy-full', ['ftp-deploy:full']);
-	grunt.registerTask('build', ['sass:prod', 'autoprefixer', 'cssc:prod', 'requirejs','uglify']);
+	grunt.registerTask('build', ['sass:prod', 'autoprefixer', 'cssc:prod', 'requirejs', 'uglify']);
 
+	grunt.registerTask('bower', ['copy:mbiFrame', 'copy:mbiLib']);
 
 
 		// 	},
