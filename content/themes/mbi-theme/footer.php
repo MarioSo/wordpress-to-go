@@ -1,7 +1,7 @@
-
-	<script src="<?php echo(get_template_directory_uri()); ?>/assets/build/js/main.js"></script>
+	</div><!-- END .page -->
 
 	<?php wp_footer(); ?>
+	<?php $javascript->footer(); ?>
 
 </body>
 </html>
