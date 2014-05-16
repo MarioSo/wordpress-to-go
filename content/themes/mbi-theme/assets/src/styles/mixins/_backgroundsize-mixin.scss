@@ -1,7 +1,0 @@
-@mixin background-size($arg) {
-
-	@include prefixer(background-size, $arg, webkit moz spec);
-
-	image-rendering: optimizeQuality;
-
-}
