@@ -1,0 +1,22 @@
+{
+  "name": "WordpressToGo",
+  "version": "0.1.0",
+  "authors": [
+    "Mario Sommer <mario.sommer@moodley.at>",
+    "Marcel Seelig <marcel.seelig@moodley.at>"
+  ],
+  "description": "Wordpress Base",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies" : {
+    "mbiFrame" : "https://github.com/mwseelig/mbiFrame.git#0.1.5",
+    "mbiLib" : "https://github.com/mwseelig/mbiLib.git#0.1.5"
+  }
+}
