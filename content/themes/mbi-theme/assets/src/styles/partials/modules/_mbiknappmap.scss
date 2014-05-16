@@ -1,0 +1,81 @@
+/**
+ * knappmap
+ *
+ * @version 0.2.0
+ */
+.panzoom {
+
+	position: relative;
+
+	.constrain {
+
+		background: #333;
+		color: black;
+		width: 100%;
+		height: 25%;
+		overflow: hidden;
+		background: #eaeaea;
+
+	}
+
+		.map {
+
+			width: 1920px;
+			height: 1080px;
+			padding: 200px;
+
+			position: relative;
+
+			background: transparent url(./assets/gfx/map.jpg) center center no-repeat;
+
+			box-sizing: content-box;
+
+		}
+		.map--transition {
+
+			@include transition(transform 500ms ease-in-out 0 !important);
+
+		}
+
+			.waypoint {
+
+				width: 64px;
+				height: 64px;
+
+				position: absolute;
+
+				border: 16px solid #333;
+				background: yellow;
+				border-radius: 100%;
+
+				text-align: center;
+				line-height: 64px;
+				font-size: 32px;
+
+				@include box-sizing(content-box);
+
+				// -webkit-user-select: none;
+				// -moz-user-select: none;
+				// -ms-user-select: none;
+				// -o-user-select: none;
+				// user-select: none;
+
+				@include user-select(none);
+
+				cursor: pointer;
+
+				@include transition(transform 250ms linear 0, border-color 250ms linear 0, background-color 250ms linear 0);
+
+				@include transform(scale(0.5));
+
+			}
+			.waypoint--active {
+
+				background-color: white;
+				border-color: yellow;
+
+				@include transform(scale(1.0));
+
+			}
+
+}

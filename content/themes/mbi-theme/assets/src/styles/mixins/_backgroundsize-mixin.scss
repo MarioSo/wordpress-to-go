@@ -1,0 +1,12 @@
+/**
+ * @version 0.2.0
+ */
+@mixin background-size($arg) {
+
+	-webkit-background-size: $arg;
+	-moz-background-size: $arg;
+	background-size: $arg;
+
+	image-rendering: optimizeQuality;
+
+}

@@ -1,0 +1,20 @@
+/**
+ * @version 0.2.0
+ */
+
+$base-font-size: 16 !default;
+
+@mixin font-size($size) {
+
+  font-size: $size + px;
+	font-size: ($size/$base-font-size) + em;
+
+}
+
+@mixin line-height($lineheight, $size) {
+
+  line-height: $lineheight + px;
+  line-height: ($lineheight/$size) + em;
+
+}
+

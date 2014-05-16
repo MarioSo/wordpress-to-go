@@ -1,5 +1,7 @@
 /**
-* Gruntfile - v.0.1.0
+* Gruntfile
+*
+* @version 0.1.1
 *
 * Do not configure tasks here. Every task should be configured in a
 * seperate file in tasks/options.
