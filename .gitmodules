@@ -8,3 +8,6 @@
 [submodule "content/plugins/adminimize"]
 	path = content/plugins/adminimize
 	url = https://github.com/bueltge/Adminimize.git
+[submodule "content/themes/main/assets/styles/basecss"]
+	path = content/themes/main/assets/styles/basecss
+	url = git@github.com:MarioSo/baseCss.git

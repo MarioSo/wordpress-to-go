@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 
   // Load all the tasks options in tasks/options base on the name:
   // watch.js => watch{}
-  grunt.util._.extend(config, loadConfig('./tasks/options/'));
+  grunt.util._.extend(config, loadConfig('./tasks/'));
 
   grunt.initConfig(config);
 
@@ -45,8 +45,16 @@ module.exports = function(grunt) {
 
 
   // Tasks
-  grunt.registerTask('default', ['watch']);
-	grunt.registerTask('require', ['requirejs']);
-	grunt.registerTask('build', ['sass:prod', 'autoprefixer', 'cssc:prod', 'requirejs','uglify']);
+  grunt.registerTask('default', ['build', 'watch']);
+
+  // styles
+  grunt.registerTask('styles-dev', ['sass:dev', 'autoprefixer', 'cssc:dev']);
+  grunt.registerTask('styles', ['sass:prod', 'autoprefixer', 'cssc:prod']);
+
+  // scripts
+  grunt.registerTask('scripts', ['requirejs','uglify']);
+
+  // build
+  grunt.registerTask('build', ['styles', 'scripts']);
 
 };

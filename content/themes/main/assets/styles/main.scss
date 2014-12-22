@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/*------------------------------------*\
+		BASE.CSS
+\*------------------------------------*/
+/*
+	*
+	* Good artists copy; great artists steal.
+	* - Pablo Picasso (probably)
+	*
+	* base.css is heavily inspired by
+	* inuitcss.com (@inuitcss)
+	* thank you Harry! @csswizardry is
+	* a genius!
+	*
+	* check it out at https://github.com/inuitcss
+	*
+	*/
+
+
+/**
+ * Default configuration of the framework
+ * do not change this file, provide a own
+ * configuration file for you project.
+ */
+@import "basecss/settings/defaults";
+
+
+/**
+ * tools: a helping hand.
+ */
+@import "basecss/tools/functions/math-helper";
+@import "basecss/tools/functions/conversion-helper";
+@import "basecss/tools/mixins/sizes";
+@import "basecss/tools/mixins/media-query";
+
+
+/**
+ * Generic things like a reset or normalize
+ */
+@import "basecss/generic/normalize";
+@import "basecss/generic/reset";
+
+/**
+ * The base
+ */
+@import "basecss/base/page";
+@import "basecss/base/headings";
+@import "basecss/base/paragraphs";
+@import "basecss/base/images";
+
+/**
+ * Reusable Objects
+ */
+@import "basecss/objects/layout";
+
+
+/**
+ * Trumps
+ */
+@import "basecss/trumps/helper";
+@import "basecss/trumps/clearfix";
+@import "basecss/trumps/widths";
+@import "basecss/trumps/_spacing";
