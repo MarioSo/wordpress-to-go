@@ -15,16 +15,23 @@ include(locate_template('header.php'));
 <h2 class="h2">hello world</h2>
 <?php
 
-$adm = WPAD_Manager::get_instance();
+// echo "<pre>";
+// echo get_the_post_thumbnail();
+// echo "</pre>";
+
+// echo "<pre>";
+// var_dump( get_field('rwd-img'));
+// echo "</pre>";
+// echo "huhu";
+
+echo "<pre>";
+var_dump(get_field('rwd-img'));
+echo "</pre>";
 
 
-echo $adm->render(array('text' => 'variables', 'go' => 'here'));
 
+Image::render(get_field('rwd-img'));
 
-
-//Image::renderImg();
-
-//echo $twig->render('hello.html', array('the' => 'variables', 'go' => 'here'));
 
 
 include(locate_template('footer.php'));

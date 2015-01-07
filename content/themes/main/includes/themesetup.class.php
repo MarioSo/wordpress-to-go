@@ -13,32 +13,50 @@
 	* - actions
 	*
 	*/
+
 class ThemeSetup {
+
+
+	const SETTING_DEBUG = "themeSetting_debug";
+	const SETTING_REQUIREJS_CONF_PATH = "themeSetting_requireJSConfPath";
+	const SETTING_REGISTER_MENU = "themeSetting_registerMenus";
+	const SETTING_FILTERS = "themeSetting_filters";
+	const SETTING_ACTIONS = "themeSetting_actions";
+	const SETTING_RWD_IMAGE_SIZES = "themeSetting_rwd-image-sizes";
 
 	/**
 	 * This is the global settings array to store all the information.
 	 */
 	protected static $settings = array(
-		'debug' => true,
-		'requireJSConfPath' => '/assets/config/require-build.js',
-		'registerMenus' => array(
+		self::SETTING_DEBUG => true,
+		self::SETTING_REQUIREJS_CONF_PATH => '/assets/config/require-build.js',
+		self::SETTING_REGISTER_MENU => array(
 			'main_nav' => 'Main Menu'
 		),
-		'filters' => array(
-			'show_admin_bar' => 'hideAdminBar'
+		self::SETTING_FILTERS => array(
+			'show_admin_bar' => 'hideAdminBar',
+			'jpeg_quality' => 'setJPEGFullQuality',
+			'wp_editor_set_quality' => 'setJPEGFullQuality'
 		),
-		'actions' => array(
+		self::SETTING_ACTIONS => array(
 			'init' => array(
 				'cleanupHeader' => true,
 				'beautifySearchRedirect' => true,
 				'unloadJquery' => true,
-				'removeComments' => true
+				'removeComments' => true,
+				'themeSupportThumbnails' => true
 			),
 			'after_setup_theme' => array(
 				'robotNoIndexForDevelop' => true
 			),
 			'wp_footer' => array(
 				'printRequireJSLazyLoadingPaths' => true
+			)
+		),
+		self::SETTING_RWD_IMAGE_SIZES => array(
+			'standard' => array(
+				'fallback' => '512w',
+				'sizes' => array('1920w', '1024w', '512w', '320w')
 			)
 		)
 	);
@@ -97,6 +115,13 @@ class ThemeSetup {
 	}
 
 	/**
+	 * Filters the image quality to be at the highest ratio possible.
+	 */
+	public static function setJPEGFullQuality( $quality ) {
+		return 100;
+	}
+
+	/**
 	 * Do not load jQuery
 	 */
 	public static function unloadJquery() {
@@ -130,6 +155,10 @@ class ThemeSetup {
 		add_action('wp_before_admin_bar_render', 'removeCommentsFromAdminBar');
 	}
 
+	public static function themeSupportThumbnails(){
+		add_theme_support( 'post-thumbnails' );
+	}
+
 
 	/**
 	 * Registers all specified menus
@@ -149,7 +178,7 @@ class ThemeSetup {
 	 */
 	public static function printRequireJSLazyLoadingPaths(){
 		$basePath = get_template_directory_uri() . '/assets/scripts';
-		$requireConfigPath = get_template_directory() . static::$settings['requireJSConfPath'];
+		$requireConfigPath = get_template_directory() . static::$settings[self::SETTING_REQUIREJS_CONF_PATH];
 		if(file_exists($requireConfigPath)){
 			preg_match_all('/\(([\s\S]+?)\)/', file_get_contents($requireConfigPath), $json);
 			$requirePaths = json_decode($json[1][0], true)['paths'];
@@ -212,7 +241,7 @@ class ThemeSetup {
 	 */
 	public static function setup() {
 
-		$actions = static::getSetting('actions');
+		$actions = static::getSetting(self::SETTING_ACTIONS);
 		foreach ($actions as $hooks => $hook) {
 			foreach($hook as $functionName => $param) {
 				if (is_string($functionName) && method_exists(new static(), $functionName)) {
@@ -222,15 +251,15 @@ class ThemeSetup {
 		}
 
 		// filters
-		$filters = static::getSetting('filters');
+		$filters = static::getSetting(self::SETTING_FILTERS);
 		foreach ($filters as $filter => $action) {
 			add_filter($filter, array(new static(), $action));
 		}
 
 		// register menus
-		$registeredMenus = static::getSetting('registerMenus');
+		$registeredMenus = static::getSetting(self::SETTING_REGISTER_MENU);
 		if(count($registeredMenus) > 0){
-			static::registerMenus(static::getSetting('registerMenus'));
+			static::registerMenus(static::getSetting(self::SETTING_REGISTER_MENU));
 		}
 
 	}

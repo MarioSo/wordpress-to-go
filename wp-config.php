@@ -111,6 +111,12 @@ define('WP_MEMORY_LIMIT', '128M');
 /** Store just 1 post revisions **/
 define('WP_POST_REVISIONS', 1);
 
+/** needed for image resizing in image.class */
+if ( !defined('PROJECT_ABSPATH') )
+	define('PROJECT_ABSPATH', dirname(dirname(__FILE__)));
+
+if ( !defined('PROJECT_ROOT_ABSPATH') )
+	define('PROJECT_ROOT_ABSPATH', dirname(__FILE__));
 
 /* That's all, stop editing! Happy blogging. */
 

@@ -3,7 +3,7 @@ module.exports = {
 		// Task-specific options go here.
 	},
 	prefix: {
-		src: '<%= pkg.path.theme %>style.css',
-		dest: '<%= pkg.path.theme %>style.css'
+		src: '<%= pkg.path.static %>css/main.css',
+		dest: '<%= pkg.path.static %>css/main.css'
 	}
 };

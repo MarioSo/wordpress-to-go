@@ -20,14 +20,14 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 require_once plugin_dir_path( __FILE__ ) . 'includes/wpad_Manager.class.php';
-require_once plugin_dir_path( __FILE__ ) . '/twig/lib/Twig/Autoloader.php';
+// require_once plugin_dir_path( __FILE__ ) . '/twig/lib/Twig/Autoloader.php';
 require_once plugin_dir_path( __FILE__ ) . 'mustache/src/Mustache/Autoloader.php';
 
 
 
 function setup() {
 
-	Twig_Autoloader::register();
+	// Twig_Autoloader::register();
 	Mustache_Autoloader::register();
 
 	$adm = WPAD_Manager::get_instance();

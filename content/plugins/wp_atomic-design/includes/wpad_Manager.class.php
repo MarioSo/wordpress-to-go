@@ -51,7 +51,7 @@ class WPAD_Manager {
 
 		//echo plugin_dir_path( dirname( __FILE__ ) );
 		// template stuff
-		$this->twigLoader = new Twig_Loader_Filesystem(plugin_dir_path( dirname( __FILE__ ) ) . 'views');
+		// $this->twigLoader = new Twig_Loader_Filesystem(plugin_dir_path( dirname( __FILE__ ) ) . 'views');
 
 
 
@@ -61,7 +61,7 @@ class WPAD_Manager {
 		//     'cache' => plugin_dir_path( dirname( __FILE__ ) ) . 'templates/compilation_cache',
 		// ));
 
-		$this->twigInstance = new Twig_Environment($this->twigLoader);
+		// $this->twigInstance = new Twig_Environment($this->twigLoader);
 
 	}
 

@@ -6,7 +6,7 @@ module.exports = {
 			consolidateMediaQueries:    true
 		},
 		files: {
-			'<%= pkg.path.theme %>style.css': '<%= pkg.path.theme %>style.css'
+			'<%= pkg.path.static %>css/main.css': '<%= pkg.path.static %>css/main.css'
 		}
 	},
 	dev: {
@@ -18,7 +18,7 @@ module.exports = {
 			compress: false
 		},
 		files: {
-			'<%= pkg.path.theme %>style.css': '<%= pkg.path.theme %>style.css'
+			'<%= pkg.path.static %>css/main.css': '<%= pkg.path.static %>css/main.css'
 		}
 	}
 };
