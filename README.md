@@ -1,2 +1,2 @@
 #a gentle reminder
-...that I should write a readme :)
+...that I should write an readme :)
