@@ -12,7 +12,7 @@ include(locate_template('header.php'));
 
 
 ?>
-<h2 class="h2">hello world</h2>
+<h2 class="h2">hello world!</h2>
 <?php
 
 // echo "<pre>";

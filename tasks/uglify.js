@@ -1,8 +1,9 @@
+/**
+ * grunt-contrib-uglify - https://github.com/gruntjs/grunt-contrib-uglify
+ * Minify files with UglifyJS.
+ */
 module.exports = {
 	target_scripts: {
-		// files: {
-		// 	'<%= pkg.buildUrl %>js/*.js': '<%= pkg.buildUrl %>js/*.js'
-		// }
 		files: [{
 			expand: true,
 			cwd: '<%= pkg.buildUrl %>js',

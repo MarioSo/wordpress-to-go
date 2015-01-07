@@ -7,7 +7,7 @@ require.config({
 			"ready" : "basejs/vendor/domReady",
 			"elements" : "basejs/modules/elements"
 	},
-	"dir": "../static/js",
+	"dir": "../../static/js",
 	"optimize": "none",
 	"modules": [{
 			"name": "main",

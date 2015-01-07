@@ -1,50 +1,41 @@
 {
   "name": "wordpress-to-go",
   "version": "0.1.0",
-  "description": "blueprint wordpress",
+  "description": "A starting point for Wordpress madness. Featureing Grunt, Sass, RequireJS, Responsive Images etc.",
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/MarioSo/wordpress-to-go.git"
   },
+  "bugs": {
+    "url": "https://github.com/MarioSo/wordpress-to-go/issues"
+  },
   "keywords": [
-    "wordpress"
+    "wordpress",
+    "wordpress template",
+    "wordpress to go"
   ],
-  "author": "mario sommer",
+  "author": "Mario Sommer <hello@mariosommer.at>",
   "bugs": {
     "url": "https://github.com/MarioSo/wordpress-to-go/issues"
   },
   "homepage": "https://github.com/MarioSo/wordpress-to-go",
   "devDependencies": {
-    "browserify": "^6.3.2",
-    "browserify-shim": "^3.8.0",
-    "glob": "~3.2.9",
-    "grunt": "~0.4.2",
-    "grunt-autoprefixer": "~0.7.2",
-    "grunt-browserify": "^3.2.0",
+    "glob": "^4.3.2",
+    "grunt": "~0.4.5",
+    "grunt-autoprefixer": "^2.1.0",
     "grunt-contrib-requirejs": "^0.4.4",
     "grunt-contrib-sass": "~0.7.3",
     "grunt-contrib-uglify": "~0.2.7",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-cssc": "~0.2.6",
-    "grunt-ftp-deploy": "^0.1.2",
-    "grunt-newer": "^0.7.0"
-  },
-  "dependencies": {
-    "load-grunt-tasks": "~0.2.1"
+    "grunt-cssc": "^0.2.6",
+    "grunt-sass": "^0.17.0",
+    "load-grunt-tasks": "^0.2.1"
   },
   "path": {
     "theme": "content/themes/main/",
     "assets": "content/themes/main/assets/",
-    "static": "content/themes/main/assets/static/"
+    "static": "content/themes/main/static/"
   },
-  "browserify": {
-    "transform": [ "browserify-shim" ]
-  },
-  "browser": {
-    "modernizr"    :  "./content/themes/main/assets/scripts/basejs/vendor/modernizr.js"
-  },
-  "browserify-shim": {
-    "modernizr": "modernizr"
-  }
+  "license": "MIT"
 }

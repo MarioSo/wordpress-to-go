@@ -1,18 +1,21 @@
+/**
+ * grunt-sass https://github.com/sindresorhus/grunt-sass
+ * uses libsass which is faster, but missing some features.
+ */
+
 module.exports = {
 	prod: {
 		options: {
-			style: 'compressed',
-			sourcemap: false,
-			cacheLocation: '<%= pkg.path.assets %>styles/.sass-cache'
+			outputStyle: 'compressed'
 		},
 		files: {
 			'<%= pkg.path.static %>/css/main.css': '<%= pkg.path.assets %>styles/main.scss',
 		}
 	},
-	dev:{
+	dev: {
 		options: {
-			style: 'expanded',
-			cacheLocation: '<%= pkg.path.assets %>styles/.sass-cache'
+			sourceMap: true,
+			outputStyle: 'expanded'
 		},
 		files: {
 			'<%= pkg.path.static %>/css/main.css': '<%= pkg.path.assets %>styles/main.scss',

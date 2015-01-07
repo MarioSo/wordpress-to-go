@@ -1,0 +1,26 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"../../assets/styles/main.scss",
+		"../../assets/styles/basecss/settings/_defaults.scss",
+		"../../assets/styles/basecss/tools/functions/_math-helper.scss",
+		"../../assets/styles/basecss/tools/functions/_conversion-helper.scss",
+		"../../assets/styles/basecss/tools/mixins/_sizes.scss",
+		"../../assets/styles/basecss/tools/mixins/_media-query.scss",
+		"../../assets/styles/basecss/generic/_normalize.scss",
+		"../../assets/styles/basecss/generic/_reset.scss",
+		"../../assets/styles/basecss/base/_page.scss",
+		"../../assets/styles/basecss/base/_headings.scss",
+		"../../assets/styles/basecss/base/_paragraphs.scss",
+		"../../assets/styles/basecss/base/_images.scss",
+		"../../assets/styles/basecss/objects/_layout.scss",
+		"../../assets/styles/basecss/trumps/_helper.scss",
+		"../../assets/styles/basecss/trumps/_clearfix.scss",
+		"../../assets/styles/basecss/trumps/_widths.scss",
+		"../../assets/styles/basecss/trumps/_spacing.scss"
+	],
+	"sourcesContent": [],
+	"mappings": "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",
+	"names": []
+}

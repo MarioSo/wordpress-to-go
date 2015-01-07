@@ -38,7 +38,7 @@
 		} ?>
 	</title>
 
-	<link rel="stylesheet" href="<?php echo(get_template_directory_uri()); ?>/assets/static/css/main.css">
+	<link rel="stylesheet" href="<?php echo(get_template_directory_uri()); ?>/static/css/main.css">
 
 	<?php wp_head(); ?>
 

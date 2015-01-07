@@ -41,7 +41,7 @@ module.exports = function(grunt) {
   grunt.initConfig(config);
 
   require('load-grunt-tasks')(grunt);
-  grunt.loadNpmTasks('grunt-newer');
+  // grunt.loadNpmTasks('grunt-newer');
 
 
   // Tasks

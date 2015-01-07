@@ -1,3 +1,7 @@
+/**
+ * grunt-contrib-watch - https://github.com/gruntjs/grunt-contrib-watch
+ * Run tasks whenever watched files change.
+ */
 module.exports = {
  options: {
 		livereload: true,
