@@ -16,14 +16,12 @@
     "wordpress to go"
   ],
   "author": "Mario Sommer <hello@mariosommer.at>",
-  "bugs": {
-    "url": "https://github.com/MarioSo/wordpress-to-go/issues"
-  },
   "homepage": "https://github.com/MarioSo/wordpress-to-go",
   "devDependencies": {
     "glob": "^4.3.2",
     "grunt": "~0.4.5",
     "grunt-autoprefixer": "^2.1.0",
+    "grunt-browser-sync": "^2.0.0",
     "grunt-contrib-requirejs": "^0.4.4",
     "grunt-contrib-sass": "~0.7.3",
     "grunt-contrib-uglify": "~0.2.7",

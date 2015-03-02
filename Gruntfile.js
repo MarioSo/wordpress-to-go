@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 
 
   // Tasks
-  grunt.registerTask('default', ['build', 'watch']);
+  grunt.registerTask('default', ['build', 'browserSync', 'watch']);
 
   // styles
   grunt.registerTask('styles-dev', ['sass:dev', 'autoprefixer', 'cssc:dev']);
