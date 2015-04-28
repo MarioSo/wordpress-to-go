@@ -53,7 +53,7 @@ Class Image {
 		// generate html tag
 		$output = '<img src="' . self::getImageUrlForSize($imageObj['url'], $templateObj['fallback']) . '"';
 		$output .= self::renderSrcset($imageObj['url'], $templateObj['sizes']);
-		$output .= ' >';
+		$output .= ' alt="">';
 
 		if ($echo === true) {
 			echo $output;
@@ -74,7 +74,7 @@ Class Image {
 			return '';
 		}
 
-		$output = 'srcset="';
+		$output = ' srcset="';
 
 		foreach ($sizes as $size){
 			$imageUrl = self::getImageUrlForSize($baseImageUrl, $size);
