@@ -97,7 +97,7 @@ require_once('includes/image.class.php');
 
 
 
-require_once('includes/ThemeSetup.class.php');
+require_once('includes/themesetup.class.php');
 
 /**
 	* register additional menus
