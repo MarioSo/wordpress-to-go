@@ -2,7 +2,7 @@
  * Descrition
  */
 define(function () {
-    
+    "use strict";
 
     /**
      * This is our classes constructor;

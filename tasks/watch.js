@@ -9,7 +9,7 @@ module.exports = {
 		debounceDelay: 250
  },
  scripts: {
-		files: ['<%= pkg.path.static %>js/**/*.js'],
+		files: ['<%= pkg.path.assets %>js/**/*.js'],
 		tasks: ['requirejs']
 		// tasks: ['requirejs:head', 'requirejs:main']
  },

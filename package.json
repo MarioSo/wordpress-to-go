@@ -15,7 +15,7 @@
     "wordpress template",
     "wordpress to go"
   ],
-  "author": "Mario Sommer <hello@mariosommer.at>",
+  "author": "@mario_sommer",
   "homepage": "https://github.com/MarioSo/wordpress-to-go",
   "devDependencies": {
     "glob": "^4.3.2",
@@ -26,7 +26,7 @@
     "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-cssc": "^0.2.6",
-    "grunt-sass": "^1.0.0",
+    "grunt-sass": "^0.18.1",
     "load-grunt-tasks": "^3.2.0"
   },
   "path": {
